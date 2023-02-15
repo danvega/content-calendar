@@ -3,7 +3,6 @@ package dev.danvega.contentcalendar.controller;
 import dev.danvega.contentcalendar.model.Content;
 import dev.danvega.contentcalendar.repository.ContentRepository;
 import jakarta.validation.Valid;
-import jdk.jfr.ContentType;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
