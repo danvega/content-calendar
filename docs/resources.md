@@ -36,4 +36,7 @@ This is a list of resources in the Spring Community that I recommend.
 
 - [Dan Vega](https://www.danvega.dev)
 - [Spring Office Hours](https://tanzu.vmware.com/developer/tv/spring-office-hours/)
-
+- [Twitter](https://twitter.com/therealdanvega)
+- [GitHub](https://github.com/danvega)
+- [LinkedIn](https://www.linkedin.com/in/danvega)
+- [Newsletter](https://www.danvega.dev/newsletter)
