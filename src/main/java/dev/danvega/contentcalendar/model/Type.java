@@ -1,6 +1,6 @@
 package dev.danvega.contentcalendar.model;
 
-public enum ContentType {
+public enum Type {
     ARTICLE,
     VIDEO,
     COURSE,

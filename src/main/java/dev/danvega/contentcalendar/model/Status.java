@@ -1,4 +1,4 @@
-package dev.danvega.habitz.model;
+package dev.danvega.contentcalendar.model;
 
 public enum Status {
     IDEA,

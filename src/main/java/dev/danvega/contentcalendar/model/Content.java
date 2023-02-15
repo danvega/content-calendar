@@ -1,16 +1,18 @@
-package dev.danvega.habitz.model;
+package dev.danvega.contentcalendar.model;
+
+import org.springframework.data.annotation.Id;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 public record Content(
+        @Id
         Integer id,
-//        Integer userId, later
+        String title,
+        String desc,
         Status status,
-        ContentType contentType,
+        Type contentType,
         LocalDateTime dateCreated,
         LocalDateTime dateUpdated,
-        String url,
-        List<Tag> tags
+        String url
 ) {
 }

@@ -4,14 +4,6 @@ Production is the greatest place on the web! We should all want to go there but 
 
 ![Production](./images/production.png)
 
-## Configuration
-
-## Profiles
-
-## Actuator
-
-## Builds
-
 In this lecture you will learn how to build your application using the following methods:
 
 - Uber JAR
