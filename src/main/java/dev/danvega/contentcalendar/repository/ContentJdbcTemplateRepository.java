@@ -37,12 +37,12 @@ public class ContentJdbcTemplateRepository {
         return contents;
     }
 
-    public void createContent(String title, String desc, String status, String contentType, String URL) {
+    public void createContent(String title, String desc, Status status, Type contentType, String URL) {
         String sql = "INSERT INTO Content (title, desc, status, content_type, date_created, URL) VALUES (?, ?, ?, ?, NOW(), ?)";
         jdbcTemplate.update(sql, title, desc, status, contentType, URL);
     }
 
-    public void updateContent(int id, String title, String desc, String status, String contentType, String URL) {
+    public void updateContent(int id, String title, String desc, Status status, Type contentType, String URL) {
         String sql = "UPDATE Content SET title=?, desc=?, status=?, content_type=?, date_updated=NOW(), url=? WHERE id=?";
         jdbcTemplate.update(sql, title, desc, status, contentType, URL, id);
     }
