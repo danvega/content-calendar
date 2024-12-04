@@ -1,15 +1,22 @@
 package dev.danvega.contentcalendar.config;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import dev.danvega.contentcalendar.model.Content;
-import dev.danvega.contentcalendar.repository.ContentRepository;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
-
 import java.io.InputStream;
 import java.util.List;
 
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import dev.danvega.contentcalendar.model.Content;
+import dev.danvega.contentcalendar.repository.ContentRepository;
+/*
+ *  DataLoader class is responsible for initializing the content database by 
+ * loading data from a specified JSON file when the Spring Boot application 
+ * is started, but only if the repository currently contains no data. 
+ * This is a common pattern for seeding a database with initial data.
+ */
 @Component
 public class DataLoader implements CommandLineRunner {
 
