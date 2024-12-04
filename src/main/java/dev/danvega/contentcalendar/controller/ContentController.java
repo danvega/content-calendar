@@ -89,10 +89,24 @@ public class ContentController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping("/{id}")
     public void update(@Valid @RequestBody Content content, @PathVariable Integer id) {
-        if(!repository.existsById(id)) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Content not found.");
-        }
-        repository.save(content);
+    // Check if the content exists
+    Content existingContent = repository.findById(id)
+        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Content not found."));
+
+    // Create an updated instance with preserved dateCreated and set the dateUpdated
+    Content updatedContent = new Content(
+        id,                            // use the existing ID
+        content.title(),            // new title
+        content.desc(),             // new description
+        content.status(),           // new status
+        content.contentType(),      // new content type
+        existingContent.dateCreated(), // preserve the existing dateCreated
+        LocalDateTime.now(),           // set the current time for dateUpdated
+        content.url()               // new URL
+    );
+
+    // Save the updated content
+    repository.save(updatedContent);
     }
 
 /*
