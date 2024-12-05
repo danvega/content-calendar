@@ -34,6 +34,11 @@ public class ContentController {
      * instance is declared to perform CRUD operations on Content.
         The constructor injects the repository through dependency injection.
      */
+    /*
+     * repository is the object to interact with database,
+     * to use manual connect database, amend below line.
+     * methods are: findall, findbyId,
+     */
     private final ContentRepository repository;
 
     public ContentController(ContentRepository repository) {

@@ -7,7 +7,7 @@ import org.springframework.data.relational.core.mapping.Column;
 /*
  * @Id: An annotation from Spring Data that specifies 
  * the primary key of the entity.
-@Column: An annotation that specifies the database column name 
+  @Column: An annotation that specifies the database column name 
 for the field it annotates.
  */
 public record Content(
